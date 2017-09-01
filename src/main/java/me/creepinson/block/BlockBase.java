@@ -25,7 +25,7 @@ public class BlockBase extends Block {
 	}
 	
 	public Item createItemBlock() {
-		return new ItemBlock(this);
+		return new ItemBlock(this).setRegistryName(this.getRegistryName());
 	}
 	
 	@Override

@@ -1,12 +1,13 @@
 package me.creepinson.core;
 
 import me.creepinson.core.proxy.CommonProxy;
-import net.minecraftforge.common.MinecraftForge;
+import me.creepinson.world.ModWorldGen;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Mop.modId, name = Mop.name, version = Mop.version, acceptedMinecraftVersions = "[1.12]")
 public class Mop {
@@ -24,8 +25,7 @@ public class Mop {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         System.out.println(name + " is loading!");
-        MinecraftForge.EVENT_BUS.register(new RegistryEventHandler());
-
+		GameRegistry.registerWorldGenerator(new ModWorldGen(), 3);
 
 
 
@@ -34,6 +34,8 @@ public class Mop {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
 
+    	ModRecipes.init();
+    	
     }
 
     @Mod.EventHandler
