@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mopper",
+  "name": "Mopper",
+  "description": "meep? or mop?!",
+  "version": "1.0.0",
+  "mcversion": "1.12",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Creepinson"],
+  "credits": "Creepinson",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
